@@ -7,7 +7,7 @@
             <h1>Login</h1>
             <form method="POST">
                 {% csrf_token %}
-                {% bootstrap_form form %}
+                {% form|crispy %}
                 <input type="submit" value="Login" class="btn btn-default">
             </form>
         </div>
