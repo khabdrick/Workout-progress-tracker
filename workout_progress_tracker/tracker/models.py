@@ -22,7 +22,6 @@ class WorkourkRegimen(models.Model):
     user=
     day= 
     excercise=
-    body_part=
 
 
 
