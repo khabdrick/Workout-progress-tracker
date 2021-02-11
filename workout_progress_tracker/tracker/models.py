@@ -14,8 +14,8 @@ CHOICES = (
 
 class Exercise(models.Model):
     names=
-    reps=
-    sets= 
+    reps_goals=
+    sets_goals= 
 
 class WorkourkRegimen(models.Model):
     user=
