@@ -16,7 +16,6 @@ class Exercise(models.Model):
     names=
     reps=
     sets= 
-    weight=
 
 class WorkourkRegimen(models.Model):
     user=
