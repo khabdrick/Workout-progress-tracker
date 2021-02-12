@@ -22,6 +22,7 @@ class WorkorkRegimen(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     day= models.CharField(max_length=225, choices=CHOICES)
     excercise= models.ForeignKey(Exercise,related_name="exercise", on_delete=models.CASCADE)
+    body_part = models.CharField(max_length=225)
 
 class WorkoutDailyLog:
     current_date= models.DateField(
@@ -30,6 +31,6 @@ class WorkoutDailyLog:
         blank=True,
         auto_now_add=True
     )
-    total_reps=
+    exercise_reps= models.ForeignKey(WorkorkRegimen,)
 
 
