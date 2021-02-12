@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.base import Model
 from users import User
 
 CHOICES = (
@@ -13,14 +14,14 @@ CHOICES = (
 )
 
 class Exercise(models.Model):
-    names=
-    reps_goals=
-    sets_goals= 
+    names=models.CharField(max_length=225)
+    reps_goals=models.PositiveIntegerField(max_length=223)
+    sets_goals= models.PositiveIntegerField(max_length=223)
 
 class WorkourkRegimen(models.Model):
-    user=
-    day= 
-    excercise=
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    day= models.CharField(max_length=225, )
+    excercise= models.ForeignKey(Exercise, on_delete=models.CASCADE)
 
 
 
