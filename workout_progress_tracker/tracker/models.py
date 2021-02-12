@@ -24,13 +24,13 @@ class WorkorkRegimen(models.Model):
     excercise= models.ForeignKey(Exercise,related_name="exercise", on_delete=models.CASCADE)
     body_part = models.CharField(max_length=225)
 
-class WorkoutDailyLog:
-    current_date= models.DateField(
-        max_length=255,
-        null=True,
-        blank=True,
-        auto_now_add=True
-    )
-    exercise_reps= models.ForeignKey(WorkorkRegimen,)
+# class WorkoutDailyLog:
+#     current_date= models.DateField(
+#         max_length=255,
+#         null=True,
+#         blank=True,
+#         auto_now_add=True
+#     )
+#     exercise_reps= models.ForeignKey(WorkorkRegimen,)
 
 
