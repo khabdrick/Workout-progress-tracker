@@ -20,7 +20,7 @@ class Exercise(models.Model):
 
 class WorkourkRegimen(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    day= models.CharField(max_length=225, )
+    day= models.CharField(max_length=225, choices=CHOICES)
     excercise= models.ForeignKey(Exercise, on_delete=models.CASCADE)
 
 
