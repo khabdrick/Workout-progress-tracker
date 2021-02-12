@@ -23,6 +23,13 @@ class WorkorkRegimen(models.Model):
     day= models.CharField(max_length=225, choices=CHOICES)
     excercise= models.ForeignKey(Exercise, on_delete=models.CASCADE)
 
-
+class WorkoutDailyLog:
+    current_date= models.DateField(
+        max_length=255,
+        null=True,
+        blank=True,
+        auto_now_add=True
+    )
+    total_reps=
 
 
