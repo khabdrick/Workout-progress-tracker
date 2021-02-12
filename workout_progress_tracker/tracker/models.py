@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models.base import Model
-from users import User
+from users.models import User
 
 CHOICES = (
     ("monday", "Monday"),
