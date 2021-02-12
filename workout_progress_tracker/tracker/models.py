@@ -18,7 +18,7 @@ class Exercise(models.Model):
     reps_goals=models.PositiveIntegerField(max_length=223)
     sets_goals= models.PositiveIntegerField(max_length=223)
 
-class WorkourkRegimen(models.Model):
+class WorkorkRegimen(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     day= models.CharField(max_length=225, choices=CHOICES)
     excercise= models.ForeignKey(Exercise, on_delete=models.CASCADE)
