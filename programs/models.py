@@ -50,8 +50,7 @@ class WorkoutSession(models.Model):
 	name = models.CharField(null = False, blank = False, max_length = 100)
 	summary = models.TextField(null = False, blank = True, max_length = 1000)
 	recommendations = models.TextField(null = False, blank = True, max_length = 1000)
-	motivation_quotes = models.TextField(null = False, blank = True, max_length = 1000)
-	exercises = models.ManyToManyField('gym.ExerciseSet')
+	exercises = models.ManyToManyField('exercises.ExerciseSet')
 
 	# Methods
 	def __str__(self):
