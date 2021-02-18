@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class RegimenConfig(AppConfig):
-    name = 'regimen'
+class ProgramConfig(AppConfig):
+    name = 'program'
