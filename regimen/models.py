@@ -1,4 +1,5 @@
 from django.db import models
+from users.models import User
 
 
 class RegimenExercise(models.Model):
@@ -8,9 +9,7 @@ class RegimenExercise(models.Model):
     max_weight = models.PositiveIntegerField(max_length=22)
 
 
-from django.db import models
-from django.db.models.base import Model
-from users.models import User
+
 
 DAYS_OF_THE_WEEK = (
     ("monday", "Monday"),
