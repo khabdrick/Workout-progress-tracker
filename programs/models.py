@@ -31,3 +31,15 @@ class Program(models.Model):
 	# # Methods
 	# def __str__(self):
 	# 	return self.number + ' ' + self.workout.name
+class WorkoutDay(models.Model):
+	# Constants
+	DAY = (('MO', 'Monday'), ('TU', 'Tuesday'), ('WE', 'Wednesday'), ('TH', 'Thursday'), ('FR', 'Friday'),
+	('SA', 'Saturday'), ('SU', 'Sunday'),)
+
+	# Attributes
+	day_of_week = models.CharField(max_length = 2, choices = DAY, default = 'MO')
+	session = models.ForeignKey('planner.WorkoutSession', null = False, on_delete = models.CASCADE)
+
+	# Methods
+	def __str__(self):
+		return self.day_of_week + ' - ' + self.session.name
