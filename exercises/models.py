@@ -24,18 +24,6 @@ class ExerciseSet(models.Model):
     def __str__(self):
         return str(self.exercise.name) + " - " + str(self.number_of_sets) + " sets"
 
-
-DAYS_OF_THE_WEEK = (
-    ("monday", "Monday"),
-    ("tuesday", "Tuesday"),
-    ("wednesday", "Wednesday"),
-    ("thursday", "Thursday"),
-    ("friday", "Friday"),
-    ("saturday", "Saturday"),
-    ("sunday", "Sunday"),
-)
-
-
 class Set(models.Model):
     # Constants
     REPS_UNIT = (("RE", "Reps"), ("SE", "Seconds"), ("UF", "Until Failure"))
