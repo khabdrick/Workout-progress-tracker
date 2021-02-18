@@ -12,7 +12,7 @@ class Exercise(models.Model):
 
 class ExerciseSet(models.Model):
 	# Attributes
-	exercise = models.ForeignKey('gym.Exercise', null = False, blank = False, on_delete = models.CASCADE)
+	exercise = models.ForeignKey(Exercise, null = False, blank = False, on_delete = models.CASCADE)
 	sets = models.ManyToManyField('gym.Set', related_name = 'sets')
 	number_of_sets = models.IntegerField(null = False, blank = False, default = 3)
 
@@ -33,38 +33,51 @@ DAYS_OF_THE_WEEK = (
 )
 
 
-class Day(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
-    day = models.CharField(max_length=225, choices=DAYS_OF_THE_WEEK)
-    excercises1 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLog1", on_delete=models.CASCADE
-    )
-    excercises2 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLog2", on_delete=models.CASCADE
-    )
-    excercises3 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLog3", on_delete=models.CASCADE
-    )
-    excercises4 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLogs4", on_delete=models.CASCADE
-    )
-    excercises5 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLogs5", on_delete=models.CASCADE
-    )
-    excercises6 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLogs6", on_delete=models.CASCADE
-    )
-    excercises7 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLogs7", on_delete=models.CASCADE
-    )
-    excercises8 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLogs8", on_delete=models.CASCADE
-    )
-    excercises9 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLogs9", on_delete=models.CASCADE
-    )
-    excercises10 = models.ForeignKey(
-        WorkoutLog, related_name="WorkoutLogs10", on_delete=models.CASCADE
-    )
+# class Day(models.Model):
+#     # user = models.ForeignKey(User, on_delete=models.CASCADE)
+#     day = models.CharField(max_length=225, choices=DAYS_OF_THE_WEEK)
+#     excercises1 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLog1", on_delete=models.CASCADE
+#     )
+#     excercises2 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLog2", on_delete=models.CASCADE
+#     )
+#     excercises3 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLog3", on_delete=models.CASCADE
+#     )
+#     excercises4 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLogs4", on_delete=models.CASCADE
+#     )
+#     excercises5 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLogs5", on_delete=models.CASCADE
+#     )
+#     excercises6 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLogs6", on_delete=models.CASCADE
+#     )
+#     excercises7 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLogs7", on_delete=models.CASCADE
+#     )
+#     excercises8 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLogs8", on_delete=models.CASCADE
+#     )
+#     excercises9 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLogs9", on_delete=models.CASCADE
+#     )
+#     excercises10 = models.ForeignKey(
+#         WorkoutLog, related_name="WorkoutLogs10", on_delete=models.CASCADE
+#     )
 
-    body_parts = models.CharField(max_length=225)
+#     body_parts = models.CharField(max_length=225)
+class Set(models.Model):
+	# Constants
+	REPS_UNIT = (('RE', 'Reps'), ('SE', 'Seconds'), ('UF', 'Until Failure'),)
+	WEIGHT_UNIT = (('KG', 'Kg.'), ('BW', 'Body Weight'), ('KH', 'Kms per hour'),)
+	# Attributes
+	reps = models.PositiveIntegerField(null = False, blank = False, default = 0)
+	reps_unit = models.CharField(max_length = 2, choices = REPS_UNIT, default = 'RE')
+	weight = models.DecimalField(max_digits = 5, decimal_places = 2)
+	weight_unit = models.CharField(max_length = 2, choices = WEIGHT_UNIT, default = 'RE')
+
+	# Methods
+	def __str__(self):
+		return str(self.reps) + ' ' + str(self.reps_unit) + ' x ' + str(self.weight) + ' ' + str(self.weight_unit)
