@@ -38,8 +38,21 @@ class WorkoutDay(models.Model):
 
 	# Attributes
 	day_of_week = models.CharField(max_length = 2, choices = DAY, default = 'MO')
-	session = models.ForeignKey('planner.WorkoutSession', null = False, on_delete = models.CASCADE)
+	session = models.ForeignKey('programs.WorkoutSession', null = False, on_delete = models.CASCADE)
 
 	# Methods
 	def __str__(self):
 		return self.day_of_week + ' - ' + self.session.name
+
+
+class WorkoutSession(models.Model):
+	# Attributes
+	name = models.CharField(null = False, blank = False, max_length = 100)
+	summary = models.TextField(null = False, blank = True, max_length = 1000)
+	recommendations = models.TextField(null = False, blank = True, max_length = 1000)
+	motivation_quotes = models.TextField(null = False, blank = True, max_length = 1000)
+	exercises = models.ManyToManyField('gym.ExerciseSet')
+
+	# Methods
+	def __str__(self):
+		return self.name
