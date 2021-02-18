@@ -70,8 +70,8 @@ DAYS_OF_THE_WEEK = (
 #     body_parts = models.CharField(max_length=225)
 class Set(models.Model):
 	# Constants
-	REPS_UNIT = (('RE', 'Reps'), ('SE', 'Seconds'), ('UF', 'Until Failure'),)
-	WEIGHT_UNIT = (('KG', 'Kg.'), ('BW', 'Body Weight'), ('KH', 'Kms per hour'),)
+	REPS_UNIT = (('RE', 'Reps'), ('SE', 'Seconds'), ('UF', 'Until Failure'))
+	WEIGHT_UNIT = (('KG', 'Kg.'), ('BW', 'Body Weight'))
 	# Attributes
 	reps = models.PositiveIntegerField(null = False, blank = False, default = 0)
 	reps_unit = models.CharField(max_length = 2, choices = REPS_UNIT, default = 'RE')
