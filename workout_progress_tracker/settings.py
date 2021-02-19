@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "programs",
     "exercises",
     "crispy_forms",
+    "body",
 ]
 
 MIDDLEWARE = [
