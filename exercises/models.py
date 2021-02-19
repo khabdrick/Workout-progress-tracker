@@ -6,10 +6,12 @@ class Exercise(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
     description = models.TextField(null=False, blank=True, max_length=1000)
+    tips = models.TextField(null = False, blank = True, max_length = 1000)
+    body_part = models.ManyToManyField('body.BodyPart', related_name = 'body_part')
 
-    # Methods
+	# Methods
     def __str__(self):
-        return str(self.name)
+        return str(self.body_part.all().first()) + " - " + self.name
 
 
 class ExerciseSet(models.Model):
