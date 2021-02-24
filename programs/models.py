@@ -30,7 +30,8 @@ class Program(models.Model):
 
 	# # Methods
 	def __str__(self):
-		return self.number + ' ' + self.workout.name
+		return self.name
+
 class WorkoutDay(models.Model):
 	# Constants
 	DAY = (('MO', 'Monday'), ('TU', 'Tuesday'), ('WE', 'Wednesday'), ('TH', 'Thursday'), ('FR', 'Friday'),
