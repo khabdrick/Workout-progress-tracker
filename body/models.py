@@ -1,6 +1,6 @@
 from django.db import models
 
-class BodyPart(models.Model):
+class Muscle(models.Model):
 	# Attributes
 	name = models.CharField(null = False, blank = False, max_length = 100)
 
