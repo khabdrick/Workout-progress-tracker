@@ -4,16 +4,7 @@ from datetime import datetime, timedelta
 from django.db import models
 
 
-DAYS_OF_THE_WEEK = (
-    ("monday", "Monday"),
-    ("tuesday", "Tuesday"),
-    ("wednesday", "Wednesday"),
-    ("thursday", "Thursday"),
-    ("friday", "Friday"),
-    ("saturday", "Saturday"),
-    ("sunday", "Sunday"),
-    
-)
+
 
 
 
