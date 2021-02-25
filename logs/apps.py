@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class TrackerConfig(AppConfig):
-    name = 'log'
+class LogsConfig(AppConfig):
+    name = 'logs'
