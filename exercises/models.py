@@ -28,7 +28,7 @@ class ExerciseSet(models.Model):
 
 class Set(models.Model):
     # Constants
-    REPS_UNIT = (("RE", "Reps"), ("SE", "Seconds"), ("UF", "Until Failure"))
+    REPS_UNIT = (("RE", "Reps"), ("UF", "Until Failure"))
     WEIGHT_UNIT = (("KG", "Kg."), ("BW", "Body Weight"))
     # Attributes
     reps = models.PositiveIntegerField(null=False, blank=False, default=0)
