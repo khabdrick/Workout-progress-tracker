@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "users",
-    "tracker",
+    "logs",
     "programs",
     "exercises",
     "crispy_forms",
