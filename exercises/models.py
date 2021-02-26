@@ -11,7 +11,7 @@ class Exercise(models.Model):
 
     # Methods
     def __str__(self):
-        return str(self.body_part.all().first()) + " - " + self.name
+        return str(self.muscle.all().first()) + " - " + self.name
 
 
 class ExerciseSet(models.Model):

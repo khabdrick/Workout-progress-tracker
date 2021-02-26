@@ -20,8 +20,7 @@ class WorkoutLog(models.Model):
     )
 
     # Attributes
-    name = models.CharField(null=False, blank=False, max_length=100)
-    summary = models.TextField(null=False, blank=True, max_length=1500)
+    short_note = models.TextField(null=False, blank=True, max_length=1500)
     goal = models.CharField(max_length=2, choices=TYPE, default="MA")
     day = models.CharField(max_length=225, choices=DAYS_OF_THE_WEEK)
     date = models.DateField(max_length=223, auto_now_add=True)
