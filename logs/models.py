@@ -26,4 +26,4 @@ class WorkoutLog(models.Model):
     day = models.CharField(max_length=225, choices=DAYS_OF_THE_WEEK)
     date = models.DateField(max_length=223, auto_now_add=True)
     exercises = models.ManyToManyField("exercises.ExerciseSet")
-    muscles= models.ManyToManyField("body.Muscle")
+    muscles = models.ManyToManyField("body.Muscle")
