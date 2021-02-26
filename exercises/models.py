@@ -6,10 +6,10 @@ class Exercise(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
     description = models.TextField(null=False, blank=True, max_length=1000)
-    tips = models.TextField(null = False, blank = True, max_length = 1000)
-    muscle = models.ManyToManyField('body.Muscle', related_name = 'muscle')
+    tips = models.TextField(null=False, blank=True, max_length=1000)
+    muscle = models.ManyToManyField("body.Muscle", related_name="muscle")
 
-	# Methods
+    # Methods
     def __str__(self):
         return str(self.body_part.all().first()) + " - " + self.name
 
@@ -25,6 +25,7 @@ class ExerciseSet(models.Model):
     # Methods
     def __str__(self):
         return str(self.exercise.name) + " - " + str(self.number_of_sets) + " sets"
+
 
 class Set(models.Model):
     # Constants
