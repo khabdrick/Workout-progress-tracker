@@ -1,3 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import Program, ExerciseSet
+from django.views.generic import (
+    ListView,
+    CreateView,
+    UpdateView,
+    DeleteView
+)
