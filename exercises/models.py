@@ -5,7 +5,6 @@ from users.models import User
 class Exercise(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
-    description = models.TextField(null=False, blank=True, max_length=1000)
     tips = models.TextField(null=False, blank=True, max_length=1000)
     muscle = models.ManyToManyField("body.Muscle", related_name="muscle")
 

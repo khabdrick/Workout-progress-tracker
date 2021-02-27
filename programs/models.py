@@ -44,7 +44,6 @@ class WorkoutSession(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
     summary = models.TextField(null=False, blank=True, max_length=1000)
-    recommendations = models.TextField(null=False, blank=True, max_length=1000)
     exercises = models.ManyToManyField("exercises.ExerciseSet")
 
     # Methods
