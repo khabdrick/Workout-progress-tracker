@@ -25,7 +25,7 @@ from django.views.generic import (
 
 
 
-class GroceryCreateView(LoginRequiredMixin, CreateView):
+class WorkoutDayCreateView(LoginRequiredMixin, CreateView):
     model = WorkoutDay
     form_class = WorkoutDayForm
     template_name = 'programs/workoutday.html'
@@ -35,7 +35,7 @@ class GroceryCreateView(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class GroceryCreateView(LoginRequiredMixin, CreateView):
+class WorkoutSessionCreateView(LoginRequiredMixin, CreateView):
     model = WorkoutSession
     form_class = WorkoutSessionForm
     template_name = 'programs/workoutsession.html'
