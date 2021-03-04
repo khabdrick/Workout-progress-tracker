@@ -5,16 +5,13 @@ from .models import WorkoutDay, WorkoutSession
 
 class WorkoutDayForm(forms.ModelForm):
     class Meta:
-        fields = ["item_name", "item_quantity", "item_status"]
+        fields = ["day_of_week", "session",]
         model = WorkoutDay
         widgets={
-            'item_name': forms.TextInput(
-                attrs={'class':'form-control','placeholder':'Item name'}
+            'day_of_week': forms.Select(
+                attrs={'class':'form-control',}
             ),
-            'item_quantity': forms.TextInput(
-                attrs={'class':'form-control','placeholder':'Item quantity'}
-            ),
-            'item_status': forms.Select(
+            'session': forms.Select(
                 attrs={'class':'form-control',}
             )
         }
@@ -22,16 +19,16 @@ class WorkoutDayForm(forms.ModelForm):
 
 class WorkoutSessionForm(forms.ModelForm):
     class Meta:
-        fields = ["item_name", "item_quantity", "item_status"]
+        fields = ["name", "summary", "exercises"]
         model = WorkoutSession
         widgets={
-            'item_name': forms.TextInput(
-                attrs={'class':'form-control','placeholder':'Item name'}
+            'name': forms.TextInput(
+                attrs={'class':'form-control','placeholder':'Name'}
             ),
-            'item_quantity': forms.TextInput(
-                attrs={'class':'form-control','placeholder':'Item quantity'}
+            'summary': forms.TextInput(
+                attrs={'class':'form-control','placeholder':'Summary'}
             ),
-            'item_status': forms.Select(
+            'exercises': forms.Select(
                 attrs={'class':'form-control',}
             )
         }
