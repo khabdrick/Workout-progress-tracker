@@ -38,5 +38,7 @@ python manage.py runserver
 ## Use this to access admin
 
 username: admin
+
 email: admin@gmail.com
+
 password: admin
