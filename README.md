@@ -9,5 +9,5 @@ It will also have a feature of providing helpful suggestions from time to time.
 
 
 username: admin
-email: admin@gmial.com
+email: admin@gmail.com
 password: admin
