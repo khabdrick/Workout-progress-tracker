@@ -4,5 +4,5 @@ app_name="programs"
 
 urlpatterns = [
     path("day/", WorkoutDayCreateView.as_view(), name="day"),
-    path("session/", WorkoutSessionCreateView.as_view,  name="session"),
+    path("session/", WorkoutSessionCreateView.as_view(),  name="session"),
 ]
