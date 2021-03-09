@@ -8,10 +8,10 @@ jobs:
       - uses: actions/setup-python@v2
       - run: pip install bandit black codespell flake8 isort mypy pytest pyupgrade safety
       - run: bandit -r . || true
-      - run: black --check . || true
+      - run: black --check .
       - run: codespell --quiet-level=2  # --ignore-words-list="" --skip=""
-      - run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-      - run: isort --check-only --profile black . || true
+      - run: flake8 . --count --ignore=F401,W503 --max-line-length=91 --show-source --statistics
+      - run: isort --check-only --profile black .
       - run: pip install -r requirements.txt
       - run: mypy --ignore-missing-imports . || true
       - run: pytest . || true

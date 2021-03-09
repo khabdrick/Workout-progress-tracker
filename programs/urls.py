@@ -1,8 +1,10 @@
-from django.urls import path, re_path, include
+from django.urls import include, path, re_path
+
 from .views import WorkoutDayCreateView, WorkoutSessionCreateView
-app_name="programs"
+
+app_name = "programs"
 
 urlpatterns = [
     path("day/", WorkoutDayCreateView.as_view(), name="day"),
-    path("session/", WorkoutSessionCreateView.as_view(),  name="session"),
+    path("session/", WorkoutSessionCreateView.as_view(), name="session"),
 ]

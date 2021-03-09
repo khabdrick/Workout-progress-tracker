@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('exercises', '0005_remove_exercise_description'),
+        ("exercises", "0005_remove_exercise_description"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='set',
-            name='reps_unit',
-            field=models.CharField(choices=[('RE', 'Reps')], default='RE', max_length=2),
+            model_name="set",
+            name="reps_unit",
+            field=models.CharField(
+                choices=[("RE", "Reps")], default="RE", max_length=2
+            ),
         ),
     ]

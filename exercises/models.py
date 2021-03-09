@@ -1,4 +1,5 @@
 from django.db import models
+
 from users.models import User
 
 
@@ -28,7 +29,7 @@ class ExerciseSet(models.Model):
 
 class Set(models.Model):
     # Constants
-    REPS_UNIT = (("RE", "Reps"), )
+    REPS_UNIT = (("RE", "Reps"),)
     WEIGHT_UNIT = (("KG", "Kg."), ("BW", "Body Weight"))
     # Attributes
     reps = models.PositiveIntegerField(null=False, blank=False, default=0)
