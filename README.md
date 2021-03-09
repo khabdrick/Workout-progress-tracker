@@ -1,4 +1,4 @@
-# Workout progress tracker
+# Workout progress tracker ![Lint Python](https://github.com/khabdrick/Workout-progress-tracker/actions/workflows/lint_python.yml/badge.svg)
 
 This project is a workout progress tracker, it can be used to track your progress after the gyming session and indicate if you are making progress or not. It can also be used as a log to see your past sessions and how you have improved over time.
 It will also have a feature of providing helpful suggestions from time to time.
