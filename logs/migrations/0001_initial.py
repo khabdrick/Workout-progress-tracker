@@ -8,20 +8,53 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('exercises', '0004_auto_20210226_1933'),
+        ("exercises", "0004_auto_20210226_1933"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='WorkoutLog',
+            name="WorkoutLog",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('summary', models.TextField(blank=True, max_length=1500)),
-                ('goal', models.CharField(choices=[('BU', 'Bulking'), ('CU', 'Cutting'), ('MA', 'Maintaining')], default='MA', max_length=2)),
-                ('day', models.CharField(choices=[('monday', 'Monday'), ('tuesday', 'Tuesday'), ('wednesday', 'Wednesday'), ('thursday', 'Thursday'), ('friday', 'Friday'), ('saturday', 'Saturday'), ('sunday', 'Sunday')], max_length=225)),
-                ('date', models.DateField(auto_now_add=True, max_length=223)),
-                ('exercises', models.ManyToManyField(to='exercises.ExerciseSet')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                ("summary", models.TextField(blank=True, max_length=1500)),
+                (
+                    "goal",
+                    models.CharField(
+                        choices=[
+                            ("BU", "Bulking"),
+                            ("CU", "Cutting"),
+                            ("MA", "Maintaining"),
+                        ],
+                        default="MA",
+                        max_length=2,
+                    ),
+                ),
+                (
+                    "day",
+                    models.CharField(
+                        choices=[
+                            ("monday", "Monday"),
+                            ("tuesday", "Tuesday"),
+                            ("wednesday", "Wednesday"),
+                            ("thursday", "Thursday"),
+                            ("friday", "Friday"),
+                            ("saturday", "Saturday"),
+                            ("sunday", "Sunday"),
+                        ],
+                        max_length=225,
+                    ),
+                ),
+                ("date", models.DateField(auto_now_add=True, max_length=223)),
+                ("exercises", models.ManyToManyField(to="exercises.ExerciseSet")),
             ],
         ),
     ]
