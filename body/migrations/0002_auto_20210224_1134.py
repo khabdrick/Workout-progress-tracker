@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RenameModel(
             old_name="BodyPart",
-            new_name="Muscle",
+            new_name="MuscleGroup",
         ),
     ]
