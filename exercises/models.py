@@ -5,7 +5,7 @@ class Exercise(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
     tips = models.TextField(null=False, blank=True, max_length=1000)
-    muscle = models.ManyToManyField("body.Muscle", related_name="muscle")
+    muscle = models.ManyToManyField("body.MuscleGroup", related_name="muscle")
 
     # Methods
     def __str__(self):

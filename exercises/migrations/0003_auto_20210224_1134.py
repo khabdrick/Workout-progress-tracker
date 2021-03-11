@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="exercise",
             name="muscle",
-            field=models.ManyToManyField(related_name="muscle", to="body.Muscle"),
+            field=models.ManyToManyField(related_name="muscle", to="body.MuscleGroup"),
         ),
     ]
