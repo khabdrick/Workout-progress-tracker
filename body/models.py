@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Muscle(models.Model):
+class MuscleGroup(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
 
