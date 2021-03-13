@@ -1,8 +1,5 @@
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render
-from django.urls import reverse_lazy
-from django.views.generic import CreateView, DeleteView, ListView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import CreateView
 
 from .forms import WorkoutDayForm, WorkoutSessionForm
 from .models import WorkoutDay, WorkoutSession
