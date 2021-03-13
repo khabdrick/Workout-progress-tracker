@@ -1,7 +1,5 @@
-
-
-# Django imports
 from django.db import models
+
 
 DAYS_OF_THE_WEEK = (
     ("monday", "Monday"),
