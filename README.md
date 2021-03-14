@@ -29,6 +29,8 @@ Then install the project dependencies with
 pip install -r requirements.txt
 ```
 
+
+
 Now you can run the project with this command
 
 ```
