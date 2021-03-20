@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     "logs",
     "programs",
     "exercises",
-    # "crispy_forms",
+    "crispy_forms",
     "body",
 ]
 
