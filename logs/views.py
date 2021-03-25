@@ -4,6 +4,7 @@ from django.views.generic import CreateView
 from .forms import WorkoutLogForm
 from .models import WorkoutLog
 
+
 class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
     model = WorkoutLog
     form_class = WorkoutLogForm
