@@ -30,11 +30,10 @@ class WorkoutLogForm(forms.ModelForm):
                 attrs={
                     "class": "form-control",
                 }
-            ),  
+            ),
             "muscles": forms.Select(
                 attrs={
                     "class": "form-control",
                 }
-            ),         
+            ),
         }
-
