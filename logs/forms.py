@@ -6,8 +6,11 @@ from .models import WorkoutLog
 class WorkoutLogForm(forms.ModelForm):
     class Meta:
         fields = [
-            "day_of_week",
-            "session",
+            "day",
+            "summary",
+            "goal",
+            "exercises",
+            "muscles",
         ]
         model = WorkoutLog
         widgets = {

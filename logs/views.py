@@ -1,6 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView
-
 from .forms import WorkoutLogForm
 from .models import WorkoutLog
 
