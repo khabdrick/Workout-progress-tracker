@@ -24,4 +24,5 @@ urlpatterns = [
     path("users/", include("users.urls", namespace="users")),
     # path("tracker/", include("tracker.urls", namespace="tracker")),
     path("programs/", include("programs.urls", namespace="programs")),
+    path("logs/", include("logs.urls", namespace="logs")),
 ]
