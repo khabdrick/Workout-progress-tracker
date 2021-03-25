@@ -3,7 +3,7 @@ from django import forms
 from .models import WorkoutLog
 
 
-class WorkoutDayForm(forms.ModelForm):
+class WorkoutLogForm(forms.ModelForm):
     class Meta:
         fields = [
             "day_of_week",
