@@ -1,1 +1,16 @@
-{{form}}
+{% extends "base.html" %} 
+{% block content %}
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+    {% for field in form %}
+      <label class="mt-2 ">{{ field.label }}:</label>
+    {{field}}
+{% endfor %}
+</div>
+  </div>
+</div>
+
+{% endblock content %}
+
