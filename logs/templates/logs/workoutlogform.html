@@ -8,19 +8,24 @@
 
     {{ form.day.label }}
     {{ form.day }}
+    <br>
     {{ form.summary.label }}
     {{ form.summary }}
+    <br>
     {{ form.goal.label }}
     {{ form.goal }}
+    <br>
+    
     {{ form.exercises.label }}
     {{ form.exercises }}
+    <div class="text-right">
+    <button type="button" class="btn btn-success mt-2">+</button>
+    </div>
+    <br>
     {{ form.muscles.label }}
     {{ form.muscles }}
     
 
-      {% comment %} {% for field in form %}
-      <label class="mt-2">{{ field.label }}:</label>
-      {{field}} {% endfor %} {% endcomment %}
       <button type="button" class="btn btn-success mt-3">Submit</button>
 
     </div>
