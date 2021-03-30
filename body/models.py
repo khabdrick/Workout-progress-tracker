@@ -1,21 +1,20 @@
 from django.db import models
 
+MUSCLE_GROUP = (
+    ("calves", "Calves"),
+    ("hamstrings", "Hamstrings"),
+    ("quads", "Quadriceps(quads)"),
+    ("glutes", "Glutes"),
+    ("biceps", "Biceps"),
+    ("triceps", "Triceps"),
+    ("forearms", "Forearms"),
+    ("traps", "Trapezius(traps)"),
+)
+
 
 class MuscleGroup(models.Model):
-    MUSCLE_GROUP = (
-        ("calves", "Calves"),
-        ("hamstrings", "Hamstrings"),
-        ("quads", "Quadriceps(quads)"),
-        ("glutes", "Glutes"),
-        ("biceps", "Biceps"),
-        ("triceps", "Triceps"),
-        ("forearms", "Forearms"),
-        ("traps", "Trapezius(traps)"),
-    )
     # Attributes
-    name = models.CharField(
-        null=False, blank=False, max_length=100, choices=MUSCLE_GROUP
-    )
+    name = models.CharField(max_length=100, choices=MUSCLE_GROUP)
 
     # Methods
     def __str__(self):
