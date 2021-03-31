@@ -10,6 +10,16 @@ DAYS_OF_THE_WEEK = (
     ("sunday", "Sunday"),
 )
 
+MUSCLE_GROUP = (
+    ("calves", "Calves"),
+    ("hamstrings", "Hamstrings"),
+    ("quads", "Quadriceps(quads)"),
+    ("glutes", "Glutes"),
+    ("biceps", "Biceps"),
+    ("triceps", "Triceps"),
+    ("forearms", "Forearms"),
+    ("traps", "Trapezius(traps)"),
+)
 
 class WorkoutLog(models.Model):
     TYPE = (
@@ -25,4 +35,4 @@ class WorkoutLog(models.Model):
     goal = models.CharField(max_length=2, choices=TYPE, default="MA")
     date = models.DateField(max_length=223, auto_now_add=True)
     exercises = models.ManyToManyField("exercises.ExerciseSet")
-    muscles = models.ManyToManyField("body.MuscleGroup")
+    muscles = models.CharField(max_length=100, choices=MUSCLE_GROUP)
