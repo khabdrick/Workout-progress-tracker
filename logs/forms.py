@@ -34,7 +34,7 @@ class WorkoutLogForm(forms.ModelForm):
                     "class": "form-control",
                 }
             ),
-            "muscles": forms.Select(
+            "muscles": forms.SelectMultiple(
                 attrs={
                     "class": "form-control",
                 }
