@@ -1,11 +1,21 @@
 from django.db import models
 
+MUSCLE_GROUP = (
+    ("calves", "Calves"),
+    ("hamstrings", "Hamstrings"),
+    ("quads", "Quadriceps(quads)"),
+    ("glutes", "Glutes"),
+    ("biceps", "Biceps"),
+    ("triceps", "Triceps"),
+    ("forearms", "Forearms"),
+    ("traps", "Trapezius(traps)"),
+)
 
 class Exercise(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
     tips = models.TextField(null=False, blank=True, max_length=1000)
-    muscle = models.ManyToManyField("body.MuscleGroup", related_name="muscle")
+    muscle = models.CharField(max_length=100, choices=MUSCLE_GROUP, default=None)
 
     # Methods
     def __str__(self):
