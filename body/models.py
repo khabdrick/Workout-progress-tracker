@@ -14,7 +14,7 @@ MUSCLE_GROUP = (
 
 class MuscleGroup(models.Model):
     # Attributes
-    name = models.CharField(max_length=100, choices=MUSCLE_GROUP)
+    name = models.CharField(max_length=100, choices=MUSCLE_GROUP, default=None)
 
     # Methods
     def __str__(self):
