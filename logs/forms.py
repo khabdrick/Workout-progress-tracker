@@ -34,9 +34,10 @@ class WorkoutLogForm(forms.ModelForm):
                     "class": "form-control",
                 }
             ),
-            "muscles": forms.SelectMultiple(
+            "muscles": forms.CheckboxSelectMultiple(
                 attrs={
-                    "class": "form-control",
+                    "class": "list-unstyled",
+                    "type":"checkbox"
                 }
             ),
         }
