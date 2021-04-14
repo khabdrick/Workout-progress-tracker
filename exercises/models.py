@@ -11,6 +11,7 @@ MUSCLE_GROUP = (
     ("traps", "Trapezius(traps)"),
 )
 
+
 class Exercise(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
