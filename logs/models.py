@@ -21,6 +21,7 @@ MUSCLE_GROUP = (
     ("traps", "Trapezius(traps)"),
 )
 
+
 class WorkoutLog(models.Model):
     TYPE = (
         ("BU", "Bulking"),
