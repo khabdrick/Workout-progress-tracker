@@ -8,36 +8,96 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Exercise',
+            name="Exercise",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('tips', models.TextField(blank=True, max_length=1000)),
-                ('muscle', models.CharField(choices=[('calves', 'Calves'), ('hamstrings', 'Hamstrings'), ('quads', 'Quadriceps(quads)'), ('glutes', 'Glutes'), ('biceps', 'Biceps'), ('triceps', 'Triceps'), ('forearms', 'Forearms'), ('traps', 'Trapezius(traps)')], default=None, max_length=100)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                ("tips", models.TextField(blank=True, max_length=1000)),
+                (
+                    "muscle",
+                    models.CharField(
+                        choices=[
+                            ("calves", "Calves"),
+                            ("hamstrings", "Hamstrings"),
+                            ("quads", "Quadriceps(quads)"),
+                            ("glutes", "Glutes"),
+                            ("biceps", "Biceps"),
+                            ("triceps", "Triceps"),
+                            ("forearms", "Forearms"),
+                            ("traps", "Trapezius(traps)"),
+                        ],
+                        default=None,
+                        max_length=100,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Set',
+            name="Set",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('reps', models.PositiveIntegerField(default=0)),
-                ('reps_unit', models.CharField(choices=[('RE', 'Reps')], default='RE', max_length=2)),
-                ('weight', models.DecimalField(decimal_places=2, max_digits=5)),
-                ('weight_unit', models.CharField(choices=[('KG', 'Kg.'), ('BW', 'Body Weight')], default='RE', max_length=2)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("reps", models.PositiveIntegerField(default=0)),
+                (
+                    "reps_unit",
+                    models.CharField(
+                        choices=[("RE", "Reps")], default="RE", max_length=2
+                    ),
+                ),
+                ("weight", models.DecimalField(decimal_places=2, max_digits=5)),
+                (
+                    "weight_unit",
+                    models.CharField(
+                        choices=[("KG", "Kg."), ("BW", "Body Weight")],
+                        default="RE",
+                        max_length=2,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='ExerciseSet',
+            name="ExerciseSet",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('number_of_sets', models.IntegerField(default=3)),
-                ('exercise', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='exercises.exercise')),
-                ('sets', models.ManyToManyField(related_name='sets', to='exercises.Set')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("number_of_sets", models.IntegerField(default=3)),
+                (
+                    "exercise",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="exercises.exercise",
+                    ),
+                ),
+                (
+                    "sets",
+                    models.ManyToManyField(related_name="sets", to="exercises.Set"),
+                ),
             ],
         ),
     ]
