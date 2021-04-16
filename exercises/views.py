@@ -1,5 +1,7 @@
-# from django.views.generic import CreateView, DeleteView, ListView, UpdateView
+from django.views.generic import FormView
+from .models import Exercise
+from .forms import ExerciseForm
 
-# from .models import Exercise, ExerciseSet
-
-# class ExerciseCreateView:
+class ExerciseCreateView(FormView):
+    form_class = ExerciseForm
+    template_name = "exercises/exercise_form.html"
