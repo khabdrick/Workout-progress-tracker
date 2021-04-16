@@ -11,12 +11,12 @@ class ExerciseForm(forms.ModelForm):
         ]
         model = Exercise
         widgets = {
-            "name": forms.Select(
+            "name": forms.TextInput(
                 attrs={
                     "class": "form-control",
                 }
             ),
-            "tips": forms.Select(
+            "tips": forms.TextInput(
                 attrs={
                     "class": "form-control",
                 }
