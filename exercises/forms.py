@@ -10,3 +10,18 @@ class ExerciseForm(forms.ModelForm):
             "muscle",
         ]
         model = Exercise
+        widgets = {
+            "name": forms.Select(
+                attrs={
+                    "class": "form-control",
+                }
+            ),
+            "tips": forms.Select(
+                attrs={
+                    "class": "form-control",
+                }
+            ),
+            "muscles": forms.CheckboxSelectMultiple(
+                attrs={"class": "list-unstyled", "type": "checkbox"}
+            ),
+        }
