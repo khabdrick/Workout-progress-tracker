@@ -21,7 +21,7 @@ class ExerciseForm(forms.ModelForm):
                     "class": "form-control",
                 }
             ),
-            "muscles": forms.CheckboxSelectMultiple(
+            "muscle": forms.CheckboxSelectMultiple(
                 attrs={"class": "list-unstyled", "type": "checkbox"}
             ),
         }

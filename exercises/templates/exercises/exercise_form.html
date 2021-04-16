@@ -1,1 +1,28 @@
-{{form}}
+{% extends "base.html" %} 
+{% block content %}
+<form>
+{% csrf_token %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+
+   <b> {{ form.name.label }}:</b>
+    {{ form.day }}
+    <br>
+    <b>{{ form.tips.label }}:</b>
+    {{ form.summary }}
+    <br>
+
+    <br>
+    <b>{{ form.muscle.label }}:</b>
+    {{ form.muscle }}
+    
+
+      <button type="button" class="btn btn-success mt-3">Submit</button>
+
+    </div>
+  </div>
+</div>
+</form>
+
+{% endblock content %}
