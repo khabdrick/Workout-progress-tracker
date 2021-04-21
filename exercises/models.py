@@ -16,11 +16,11 @@ class Exercise(models.Model):
     # Attributes
     name = models.CharField(null=False, blank=False, max_length=100)
     tips = models.TextField(null=False, blank=True, max_length=1000)
-    muscle = models.CharField(max_length=100, choices=MUSCLE_GROUP, default=None)
+    # muscle = models.CharField(max_length=100, choices=MUSCLE_GROUP, default=None)
 
     # Methods
     def __str__(self):
-        return str(self.muscle.all().first()) + " - " + self.name
+        return self.name
 
 
 class ExerciseSet(models.Model):

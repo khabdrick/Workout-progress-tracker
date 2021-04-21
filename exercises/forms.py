@@ -7,7 +7,7 @@ class ExerciseForm(forms.ModelForm):
         fields = [
             "name",
             "tips",
-            "muscle",
+            # "muscle",
         ]
         model = Exercise
         widgets = {
@@ -22,7 +22,7 @@ class ExerciseForm(forms.ModelForm):
                     "rows":"3"
                 }
             ),
-            "muscle": forms.CheckboxSelectMultiple(
-                attrs={"class": "list-unstyled", "type": "checkbox"}
-            ),
+            # "muscle": forms.CheckboxSelectMultiple(
+            #     attrs={"class": "list-unstyled", "type": "checkbox"}
+            # ),
         }
