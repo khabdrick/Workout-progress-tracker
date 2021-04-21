@@ -19,9 +19,10 @@ class WorkoutLogForm(forms.ModelForm):
                     "class": "form-control",
                 }
             ),
-            "summary": forms.TextInput(
+            "summary": forms.Textarea(
                 attrs={
                     "class": "form-control",
+                    "rows":"3"
                 }
             ),
             "goal": forms.Select(
