@@ -11,8 +11,8 @@ DAYS_OF_THE_WEEK = (
 )
 
 MUSCLE_GROUP = (
-    ("calves", "Calves"),
-    ("hamstrings", "Hamstrings"),
+    ("Calves", "Calves"),
+    ("Hamstrings", "Hamstrings"),
     ("quads", "Quadriceps(quads)"),
     ("glutes", "Glutes"),
     ("biceps", "Biceps"),
