@@ -38,3 +38,7 @@ class WorkoutLog(models.Model):
     date = models.DateField(max_length=223, auto_now_add=True)
     exercises = models.ManyToManyField(to="exercises.ExerciseSet", null=True, blank=True,)
     muscles = MultiSelectField(max_length=100, choices=MUSCLE_GROUP, default=None)
+
+    # Methods
+    def __str__(self):
+        return self.day
