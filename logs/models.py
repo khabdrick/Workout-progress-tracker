@@ -34,5 +34,5 @@ class WorkoutLog(models.Model):
     summary = models.TextField(null=False, blank=True, max_length=1500)
     goal = models.CharField(max_length=2, choices=TYPE, default="MA")
     date = models.DateField(max_length=223, auto_now_add=True)
-    exercises = models.ManyToManyField("exercises.ExerciseSet")
+    exercises = models.ManyToManyField(to="exercises.ExerciseSet", null=True, blank=True,)
     muscles = models.CharField(max_length=100, choices=MUSCLE_GROUP, default=None)
