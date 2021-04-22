@@ -10,16 +10,6 @@ DAYS_OF_THE_WEEK = (
     ("sunday", "Sunday"),
 )
 
-MUSCLE_GROUP = (
-    ("Calves", "Calves"),
-    ("Hamstrings", "Hamstrings"),
-    ("quads", "Quadriceps(quads)"),
-    ("glutes", "Glutes"),
-    ("biceps", "Biceps"),
-    ("triceps", "Triceps"),
-    ("forearms", "Forearms"),
-    ("traps", "Trapezius(traps)"),
-)
 
 
 class WorkoutLog(models.Model):
@@ -27,6 +17,16 @@ class WorkoutLog(models.Model):
         ("BU", "Bulking"),
         ("CU", "Cutting"),
         ("MA", "Maintaining"),
+    )
+    MUSCLE_GROUP = (
+        ("Calves", "Calves"),
+        ("Hamstrings", "Hamstrings"),
+        ("quads", "Quadriceps(quads)"),
+        ("glutes", "Glutes"),
+        ("biceps", "Biceps"),
+        ("triceps", "Triceps"),
+        ("forearms", "Forearms"),
+        ("traps", "Trapezius(traps)"),
     )
 
     # Attributes
