@@ -1,9 +1,9 @@
-[] Workout suggestion
+- [ ] Workout suggestion
 
-[x] Workout log
+- [x] Workout log
 
-[ ] Daily rating of workout for total number of reps
+- [ ] Daily rating of workout for total number of reps
 
-[ ] Daily motivational quotes
+- [ ] Daily motivational quotes
 
-[ ] 
+- [ ] ...
