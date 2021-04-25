@@ -1,6 +1,6 @@
-[ ] Workout suggestion
+[] Workout suggestion
 
-[X] Workout log
+[*] Workout log
 
 [ ] Daily rating of workout for total number of reps
 
