@@ -3,8 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, ListView
 from .forms import WorkoutLogForm
 from .models import WorkoutLog
-from users.models import User
-
+# from users.models import User
 
 class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
     model = WorkoutLog
