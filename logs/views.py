@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, ListView
 from .forms import WorkoutLogForm
 from .models import WorkoutLog
+from users.models import User
 
 
 class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
@@ -22,5 +23,5 @@ class UserGroceryListView(ListView):
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
-        return Grocery.objects.filter(user=user).order_by('-date')
+        return WorkoutLog.objects.filter(user=user).order_by('-date')
 
