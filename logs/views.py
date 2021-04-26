@@ -18,7 +18,7 @@ class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
 class UserGroceryListView(ListView):
     model = WorkoutLog
     template_name = 'logs/workoutloglist.html'  # <app>/<model>_<viewtype>.html
-    context_object_name = 'grocery'
+    context_object_name = 'log'
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))

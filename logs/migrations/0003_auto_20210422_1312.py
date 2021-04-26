@@ -7,13 +7,26 @@ import multiselectfield.db.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('logs', '0002_auto_20210422_1126'),
+        ("logs", "0002_auto_20210422_1126"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='workoutlog',
-            name='muscles',
-            field=multiselectfield.db.fields.MultiSelectField(choices=[('Calves', 'Calves'), ('Hamstrings', 'Hamstrings'), ('quads', 'Quadriceps(quads)'), ('glutes', 'Glutes'), ('biceps', 'Biceps'), ('triceps', 'Triceps'), ('forearms', 'Forearms'), ('traps', 'Trapezius(traps)')], default=None, max_length=100),
+            model_name="workoutlog",
+            name="muscles",
+            field=multiselectfield.db.fields.MultiSelectField(
+                choices=[
+                    ("Calves", "Calves"),
+                    ("Hamstrings", "Hamstrings"),
+                    ("quads", "Quadriceps(quads)"),
+                    ("glutes", "Glutes"),
+                    ("biceps", "Biceps"),
+                    ("triceps", "Triceps"),
+                    ("forearms", "Forearms"),
+                    ("traps", "Trapezius(traps)"),
+                ],
+                default=None,
+                max_length=100,
+            ),
         ),
     ]
