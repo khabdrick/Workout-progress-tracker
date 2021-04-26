@@ -1,6 +1,8 @@
 from django.db import models
 from django.db.models.enums import Choices
 from multiselectfield import MultiSelectField
+from users.models import User
+
 
 DAYS_OF_THE_WEEK = (
     ("monday", "Monday"),
@@ -32,6 +34,7 @@ class WorkoutLog(models.Model):
     )
 
     # Attributes
+    user = models.ForeignKey(User, related_name="grocery", on_delete=models.CASCADE)
     day = models.CharField(max_length=225, choices=DAYS_OF_THE_WEEK)
     summary = models.TextField(null=False, blank=True, max_length=1500)
     goal = models.CharField(max_length=2, choices=TYPE, default="MA")
