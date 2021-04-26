@@ -16,7 +16,7 @@ class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class UserGroceryListView(ListView):
+class WorkoutLogListView(ListView):
     model = WorkoutLog
     template_name = 'logs/workoutloglist.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'log'
