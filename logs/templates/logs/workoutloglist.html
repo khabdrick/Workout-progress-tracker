@@ -1,5 +1,6 @@
-{% extends "base.html" %} {% block content %} {% if
-request.user.is_authenticated %} {% for logs in log %}<br />
+{% extends "base.html" %} {% block content %} 
+{% if request.user.is_authenticated %} 
+{% for logs in log %}<br />
 {{ log.muscles }}
 <div class="container">
   <div class="row">
