@@ -1,30 +1,31 @@
-{% extends "base.html" %} 
-{% block content %}
- {% if request.user.is_authenticated %}
-    {% for logs in log %}<br />
+{% extends "base.html" %} {% block content %} {% if
+request.user.is_authenticated %} {% for logs in log %}<br />
+{{ log.muscles }}
+<div class="container">
+  <div class="row">
     <div class="col-lg-4">
       <div class="card mb-3 mt-3">
         <div class="card-body">
-          <h5 class="card-title">{{ log.muscles }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            {{ log.goal }}
-          </h6>
+          <h5 class="card-title">{{ logs.muscles }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ logs.goal }}</h6>
           <p class="text-success" style="text-transform: uppercase">
-            {{ log.day }}
+            {{ logs.day }}
           </p>
           <div class="date">
-            <p> {{ log.date|date:"D M Y"}}</p>
+            <p>{{ logs.date|date:"D M Y"}}</p>
           </div>
-         {% comment %} {% if user.is_authenticated %}
-     <a href="{% url 'grocery:grocery-update' grocery.pk %}">Update</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          {% comment %} {% if user.is_authenticated %}
+          <a href="{% url 'grocery:grocery-update' grocery.pk %}">Update</a
+          >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           <a href="{% url 'grocery:grocery-delete' pk=grocery.pk %}">Delete</a>
           {% endif %} {% endcomment %}
         </div>
       </div>
     </div>
-    {% endfor %}
-    {% else %}
-    <h1>Sorry you have to be Authenticated</h2>
+    {% endfor %} {% else %}
+    <h1>Sorry you have to be Authenticated</h1>
     {% endif %}
   </div>
-  {% endblock content %}
+</div>
+
+{% endblock content %}
