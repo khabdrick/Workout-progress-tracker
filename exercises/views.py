@@ -14,4 +14,4 @@ class ExerciseCreateView(CreateView):
         return super().form_valid(form)
     def get_success_url(self):
         return reverse('logs:log_list', args=[self.request.user.username])
-
+        

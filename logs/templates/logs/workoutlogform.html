@@ -21,7 +21,8 @@
     <b>{{ form.exercises.label }}:</b>
     {{ form.exercises }}
     <div class="text-left">
-    <button type="button" class="btn btn-success mt">+</button>
+    <a type="button" class="btn btn-success mt" href="{% url 'users:logout' %}">+</a>
+    <a class="nav-link" >Logout </a>
     </div>
     <hr>
     <br>
