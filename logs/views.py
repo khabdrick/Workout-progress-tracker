@@ -16,6 +16,7 @@ class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 class WorkoutLogListView(ListView):
+    '''Display Log list'''
     model = WorkoutLog
     template_name = 'logs/workoutloglist.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'log'
