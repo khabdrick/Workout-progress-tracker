@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "programs",
     "exercises",
     "crispy_forms",
-    'multiselectfield',
+    "multiselectfield",
 ]
 
 MIDDLEWARE = [
