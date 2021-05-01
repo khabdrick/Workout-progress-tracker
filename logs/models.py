@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models.enums import Choices
 from multiselectfield import MultiSelectField
 from django.contrib.auth import get_user_model
 
