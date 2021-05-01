@@ -5,6 +5,7 @@ from .forms import WorkoutLogForm
 from .models import WorkoutLog
 from django.contrib.auth.models import User
 
+
 class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
     model = WorkoutLog
     form_class = WorkoutLogForm
@@ -15,13 +16,14 @@ class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
+
 class WorkoutLogListView(ListView):
-    '''Display Log list'''
+    """Display Log list"""
+
     model = WorkoutLog
-    template_name = 'logs/workoutloglist.html'  # <app>/<model>_<viewtype>.html
-    context_object_name = 'log'
+    template_name = "logs/workoutloglist.html"  # <app>/<model>_<viewtype>.html
+    context_object_name = "log"
 
     def get_queryset(self):
-        user = get_object_or_404(User, username=self.kwargs.get('username'))
-        return WorkoutLog.objects.filter(user=user).order_by('-date')
-
+        user = get_object_or_404(User, username=self.kwargs.get("username"))
+        return WorkoutLog.objects.filter(user=user).order_by("-date")
