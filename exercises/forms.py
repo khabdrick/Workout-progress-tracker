@@ -51,7 +51,5 @@ class SetForm(forms.ModelForm):
                     "type": "checkbox",
                 }
             ),
-            # "muscle": forms.CheckboxSelectMultiple(
-            #     attrs={"class": "list-unstyled", "type": "checkbox"}
-            # ),
+
         }
