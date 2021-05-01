@@ -9,13 +9,19 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('logs', '0002_auto_20210426_1223'),
+        ("logs", "0002_auto_20210426_1223"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='workoutlog',
-            name='user',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='userlog', to=settings.AUTH_USER_MODEL),
+            model_name="workoutlog",
+            name="user",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="userlog",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]
