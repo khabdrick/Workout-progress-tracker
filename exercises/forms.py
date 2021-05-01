@@ -33,18 +33,18 @@ class SetForm(forms.ModelForm):
         ]
         model = Set
         widgets = {
-            "reps": forms.TextInput(
+            "reps": forms.NumberInput(
                 attrs={
                     "class": "form-control",
                 }
             ),
-            "reps_unit": forms.Textarea(
+            "reps_unit": forms.CheckboxSelectMultiple(
                 attrs={
                     "class": "list-unstyled",
                     "type": "checkbox",
                 }
             ),
-            "weight": forms.Textarea(attrs={"class": "form-control", "rows": "3"}),
+            "weight": forms.NumberInput(attrs={"class": "form-control", "rows": "3"}),
             "weight_unit": forms.CheckboxSelectMultiple(
                 attrs={
                     "class": "list-unstyled",
