@@ -4,15 +4,6 @@ from django.views.generic import CreateView
 from .forms import WorkoutDayForm, WorkoutSessionForm
 from .models import WorkoutDay, WorkoutSession
 
-# class UserGroceryListView(ListView):
-#     model = WorkoutDay
-#     template_name = 'groceries/user_grocery_list.html'
-#     context_object_name = 'workoutday'
-
-#     def get_queryset(self):
-#         user = get_object_or_404(User, username=self.kwargs.get('username'))
-#         return Grocery.objects.filter(user=user).order_by('-date')
-
 
 class WorkoutDayCreateView(LoginRequiredMixin, CreateView):
     model = WorkoutDay
