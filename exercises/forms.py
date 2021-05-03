@@ -16,9 +16,6 @@ class ExerciseForm(forms.ModelForm):
                 }
             ),
             "tips": forms.Textarea(attrs={"class": "form-control", "rows": "3"}),
-            # "muscle": forms.CheckboxSelectMultiple(
-            #     attrs={"class": "list-unstyled", "type": "checkbox"}
-            # ),
         }
 
 
