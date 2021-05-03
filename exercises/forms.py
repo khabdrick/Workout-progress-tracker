@@ -7,7 +7,6 @@ class ExerciseForm(forms.ModelForm):
         fields = [
             "name",
             "tips",
-            # "muscle",
         ]
         model = Exercise
         widgets = {
