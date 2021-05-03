@@ -1,13 +1,13 @@
 {% extends "base.html" %} 
 {% block content %}
-<form>
+<form method = "post">
 {% csrf_token %}
 <div class="container">
   <div class="row">
     <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">{{form}}</div>
   </div>
 </div>
-<button type="button" class="btn btn-success mt-3">Submit</button>
+<button type="submit" class="btn btn-success mt-3">Submit</button>
 
 </form>
 
