@@ -8,7 +8,7 @@ from .models import WorkoutDay, WorkoutSession
 class WorkoutDayCreateView(LoginRequiredMixin, CreateView):
     model = WorkoutDay
     form_class = WorkoutDayForm
-    template_name = "programs/program.html"
+    template_name = "programs/programform.html"
     # success_url = reverse_lazy('index')
 
     def form_valid(self, form):
