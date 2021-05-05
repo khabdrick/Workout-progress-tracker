@@ -5,7 +5,7 @@
 This project is a workout progress tracker, it can be used to track your progress after the gyming session and indicate if you are making progress or not. It can also be used as a log to see your past sessions and how you have improved over time.
 It will also have a feature of providing helpful suggestions from time to time.
 
-## Running this project
+## Running this project locally
 
 To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
 
