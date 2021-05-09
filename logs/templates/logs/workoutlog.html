@@ -29,7 +29,23 @@
     {% endfor %} {% else %}
     <h1>Sorry you have to be Authenticated</h1>
     {% endif %}
+    <div id= "quote">
+    </div>
   </div>
 </div>
+<script>
+let quotes ={
+  "quote1": "https://wger.de/api/v2/quote/",
+  "quote2": "https://wger.de/api/v2/quote/",
+  "quote3": "https://wger.de/api/v2/quote/",
+  "quote4": "https://wger.de/api/v2/quote/",
+  "quote5": "https://wger.de/api/v2/quote/",
+  "quote6": "https://wger.de/api/v2/quote/",
+}
+let quote = document.getElementById("quote");
+quote.innerHTML = quotes.quote1
+
+</script>
+
 
 {% endblock content %}

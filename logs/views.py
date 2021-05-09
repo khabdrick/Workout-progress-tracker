@@ -17,7 +17,7 @@ class WorkoutLogCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class WorkoutLogListView(ListView):
+class WorkoutLogView(ListView):
     """Display Log list"""
 
     model = WorkoutLog
