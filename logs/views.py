@@ -21,7 +21,7 @@ class WorkoutLogListView(ListView):
     """Display Log list"""
 
     model = WorkoutLog
-    template_name = "logs/workoutloglist.html"  # <app>/<model>_<viewtype>.html
+    template_name = "logs/workoutlog.html"  # <app>/<model>_<viewtype>.html
     context_object_name = "log"
 
     def get_queryset(self):
