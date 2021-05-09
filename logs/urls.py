@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import WorkoutLogCreateView, WorkoutLogListView
+from .views import WorkoutLogCreateView, WorkoutLogView
 
 app_name = "logs"
 
