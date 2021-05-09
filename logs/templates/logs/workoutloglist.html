@@ -22,12 +22,7 @@
           <br>
           <h6 class="card-subtitle mb-2 text-muted"><b>Goal: </b> {{ logs.get_goal_display }}</h6>
           
-          
-          {% comment %} {% if user.is_authenticated %}
-          <a href="{% url 'grocery:grocery-update' grocery.pk %}">Update</a
-          >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          <a href="{% url 'grocery:grocery-delete' pk=grocery.pk %}">Delete</a>
-          {% endif %} {% endcomment %}
+
         </div>
       </div>
     </div>
