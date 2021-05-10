@@ -5,7 +5,8 @@ from django.urls import reverse_lazy, reverse
 
 
 class ExerciseCreateView(CreateView):
-    '''View to create each Exercise'''
+    """View to create each Exercise"""
+
     model = Exercise
     form_class = ExerciseForm
     template_name = "exercises/exercise_form.html"
@@ -19,7 +20,8 @@ class ExerciseCreateView(CreateView):
 
 
 class SetCreateView(CreateView):
-    '''View to create each set for the exercises'''
+    """View to create each set for the exercises"""
+
     model = Set
     form_class = SetForm
     template_name = "exercises/set_form.html"
