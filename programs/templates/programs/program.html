@@ -1,3 +1,51 @@
+ {% extends "base.html" %} {% block content %} 
+{% if request.user.is_authenticated %} 
+{% for logs in log %}<br />
+{{ log.muscles }}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card mb-3 mt-3">
+        <div class="card-body">
+          <div class="date">
+            <p><b>Date: </b>{{ logs.date|date:"D d M Y"}}</p>
+          </div>
+          <h5 class="card-title"><b>Muscles: </b>{{ logs.muscles }}</h5>
+          <h5 class="card-title"><b>Exercises: </b>
+          {% if log.exercises %}
+          {{ logs.exercises }}
+          {% else %}
+
+          {% endif %}
+          No exercises added.
+          </h5>
+          <br>
+          <h6 class="card-subtitle mb-2 text-muted"><b>Goal: </b> {{ logs.get_goal_display }}</h6>
+          
+
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+<script>
+let quotes ={
+  "quote1": "https://wger.de/api/v2/quote/",
+  "quote2": "https://wger.de/api/v2/quote/",
+  "quote3": "https://wger.de/api/v2/quote/",
+  "quote4": "https://wger.de/api/v2/quote/",
+  "quote5": "https://wger.de/api/v2/quote/",
+  "quote6": "https://wger.de/api/v2/quote/",
+}
+let quote = document.getElementById("quote");
+quote.innerHTML = quotes.quote1
+
+</script>
+
+
+{% endblock content %}
+
   {% endfor %} {% else %}
     <h1>Sorry you have to be Authenticated</h1>
     {% endif %}
