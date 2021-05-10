@@ -1,4 +1,8 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+
+# from users.models import User
+User = get_user_model()
 
 DAYS_OF_THE_WEEK = (
     ("monday", "Monday"),
@@ -24,6 +28,13 @@ class WorkoutDay(models.Model):
     )
 
     # Attributes
+    user = models.ForeignKey(
+        User,
+        related_name="userprogram",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+    )
     day_of_week = models.CharField(max_length=2, choices=DAY, default="MO")
     session = models.ForeignKey(
         "programs.WorkoutSession", null=False, on_delete=models.CASCADE
