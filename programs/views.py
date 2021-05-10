@@ -29,7 +29,7 @@ class WorkoutSessionCreateView(LoginRequiredMixin, CreateView):
 
 
 class ProgramView(ListView):
-    """Display Log list"""
+    """Display program"""
 
     model = WorkoutDay
     template_name = "programs/program.html"  # <app>/<model>_<viewtype>.html
