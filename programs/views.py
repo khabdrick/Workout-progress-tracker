@@ -37,4 +37,4 @@ class ProgramView(ListView):
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get("username"))
-        return WorkoutDay.objects.filter(user=user).order_by("-date")
+        return WorkoutDay.objects.filter(user=user).order_by("day_of_week")
