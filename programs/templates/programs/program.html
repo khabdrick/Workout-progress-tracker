@@ -31,7 +31,10 @@ let quotes ={
   "quote6": "https://wger.de/api/v2/quote/",
 }
 let quote = document.getElementById("quote");
-quote.innerHTML = quotes.quote1
+const keys = Object.keys(quotes);
+const randomIndex = keys[Math.floor(Math.random() * keys.length)];
+const item = quotes[randomIndex];
+quote.innerHTML = item
 
 </script>
 
