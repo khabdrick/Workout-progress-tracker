@@ -1,5 +1,5 @@
  {% extends "base.html" %} {% block content %} 
-{% if request.user.is_authenticated %} 
+{% comment %} {% if request.user.is_authenticated %} 
 {% for logs in log %}<br />
 {{ log.muscles }}
 <div class="container">
@@ -20,15 +20,16 @@
           <br>
           <h6 class="card-subtitle mb-2 text-muted"><b>Goal: </b> {{ logs.get_goal_display }}</h6>  
   </div>
-</div>
+</div> {% endcomment %}
+<div id ="quote"></div>
 <script>
 let quotes ={
-  "quote1": "https://wger.de/api/v2/quote/",
+  "quote1": "https://wger.de/api/v1/quote/",
   "quote2": "https://wger.de/api/v2/quote/",
-  "quote3": "https://wger.de/api/v2/quote/",
-  "quote4": "https://wger.de/api/v2/quote/",
-  "quote5": "https://wger.de/api/v2/quote/",
-  "quote6": "https://wger.de/api/v2/quote/",
+  "quote3": "https://wger.de/api/v3/quote/",
+  "quote4": "https://wger.de/api/v4/quote/",
+  "quote5": "https://wger.de/api/v5/quote/",
+  "quote6": "https://wger.de/api/v6/quote/",
 }
 let quote = document.getElementById("quote");
 const keys = Object.keys(quotes);
@@ -41,8 +42,3 @@ quote.innerHTML = item
 
 {% endblock content %}
 
-  {% endfor %} {% else %}
-    <h1>Sorry you have to be Authenticated</h1>
-    {% endif %}
-    <div id= "quote">
-    </div>
