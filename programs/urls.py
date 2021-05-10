@@ -6,6 +6,6 @@ app_name = "programs"
 
 urlpatterns = [
     path("day/", WorkoutDayCreateView.as_view(), name="day"),
-    path("program/", ProgramView.as_view(), name="program"),
+    path("program/<str:username>/", ProgramView.as_view(), name="program"),
     path("session/", WorkoutSessionCreateView.as_view(), name="session"),
 ]
