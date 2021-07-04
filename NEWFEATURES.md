@@ -9,3 +9,5 @@
 - [ ] Dockerize
 
 - [ ] Deploy to AWS EC2
+
+
