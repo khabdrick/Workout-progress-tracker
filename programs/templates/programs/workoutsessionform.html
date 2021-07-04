@@ -4,8 +4,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
-      {{form}}
-      <button type="submit" class="btn btn-success mt-3">Submit</button>
+       <b> {{ form.name.label }}:</b>
+    {{ form.name }}
+    <br>
+    <b>{{ form.summary.label }}:</b>
+    {{ form.summary }}
+    <br>
+   <b>{{ form.exercises.label }}:</b>
+    {{ form.exercises }}
+    <br>
+     <button type="submit" class="btn btn-success mt-3">Submit</button>
       </div>
         
     </div>
@@ -14,3 +22,21 @@
 </form>
 
 {% endblock content %}
+
+{% comment %} <form method="post">
+{% csrf_token %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+
+  
+ 
+      <button type="submit" class="btn btn-success mt-3">Submit</button>
+      
+
+    </div>
+    
+  </div>
+</div>
+<br>
+</form> {% endcomment %}
