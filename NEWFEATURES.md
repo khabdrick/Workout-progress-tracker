@@ -6,6 +6,6 @@
 
 - [ ] Daily motivational quotes
 
-- [ ] ...
+- [ ] Dockerize
 
-- [ ] ...
+- [ ] Deploy to AWS EC2
