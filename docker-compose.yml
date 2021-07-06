@@ -1,0 +1,19 @@
+
+# docker-copose.yml
+
+ 
+version: "3" 
+
+services:
+  proj:
+    build:
+      context: .
+
+  #     map port on local machine to port on docker image
+    ports:
+      - "8000:8000"
+      
+    volumes:
+      - .:/proj
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
