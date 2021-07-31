@@ -5,13 +5,13 @@
 version: "3" 
 
 services:
-  app:
+  wpt:
     build:
       context: .
     ports:
       - "8000:8000"
     volumes:
-      - .WPT:/WPT
+      - ./WPT:/WPT
 
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
