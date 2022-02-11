@@ -2,6 +2,8 @@ from django.views.generic import CreateView
 from .models import Exercise, Set
 from .forms import ExerciseForm, SetForm
 from django.urls import reverse_lazy, reverse
+from rest_framework import viewsets
+from .serializers import ExerciseSerializer
 
 
 class ExerciseCreateView(CreateView):
@@ -34,3 +36,10 @@ class SetCreateView(CreateView):
         return reverse_lazy("logs:log_create")
 
 
+######################################################
+class ExerciseViewSet(viewsets.ModelViewSet):
+    """
+    A simple ViewSet for viewing and editing Exercises.
+    """
+    queryset = Exercise.objects.all()
+    serializer_class = ExerciseSerializer
