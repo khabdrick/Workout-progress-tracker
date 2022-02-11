@@ -10,7 +10,7 @@ jobs:
       - run: bandit -r . || true
       - run: black --check .
       - run: codespell --quiet-level=2  # --ignore-words-list="" --skip=""
-      - run: flake8 . --count --ignore=W503,E501 --max-line-length=91 --show-source --statistics
+      - run: flake8 . --count --ignore=W503,E501 --max-line-length=91 --show-source --statistics --exclude=migrations
 #       - run: isort --check-only --profile black .
       - run: pip install -r requirements.txt
       - run: mypy --ignore-missing-imports . || true
