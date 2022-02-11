@@ -5,22 +5,11 @@ from .models import WorkoutDay, WorkoutSession
 
 class WorkoutDayForm(forms.ModelForm):
     class Meta:
-        fields = [
-            "day_of_week",
-            "session",
-        ]
+        fields = ["day_of_week", "session"]
         model = WorkoutDay
         widgets = {
-            "day_of_week": forms.Select(
-                attrs={
-                    "class": "form-control",
-                }
-            ),
-            "session": forms.Select(
-                attrs={
-                    "class": "form-control",
-                }
-            ),
+            "day_of_week": forms.Select(attrs={"class": "form-control"}),
+            "session": forms.Select(attrs={"class": "form-control"}),
         }
 
 
@@ -35,9 +24,5 @@ class WorkoutSessionForm(forms.ModelForm):
             "summary": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Summary"}
             ),
-            "exercises": forms.Select(
-                attrs={
-                    "class": "form-control",
-                }
-            ),
+            "exercises": forms.Select(attrs={"class": "form-control"}),
         }

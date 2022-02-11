@@ -4,7 +4,7 @@ from rest_framework import routers
 
 app_name = "exercises"
 router = routers.DefaultRouter()
-router.register(r'exercises', ExerciseViewSet) # route for exercises
+router.register(r"exercises", ExerciseViewSet)  # route for exercises
 
 
 urlpatterns = [

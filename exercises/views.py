@@ -41,5 +41,6 @@ class ExerciseViewSet(viewsets.ModelViewSet):
     """
     A simple ViewSet for viewing and editing Exercises.
     """
+
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
