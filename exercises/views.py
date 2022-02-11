@@ -32,3 +32,5 @@ class SetCreateView(CreateView):
 
     def get_success_url(self):
         return reverse_lazy("logs:log_create")
+
+
