@@ -23,7 +23,7 @@ class Exercise(models.Model):
 
 
 class ExerciseSet(models.Model):
-    # Attributes
+    # Attributes for exercise sets
     exercise = models.ForeignKey(
         Exercise, null=False, blank=False, on_delete=models.CASCADE
     )
