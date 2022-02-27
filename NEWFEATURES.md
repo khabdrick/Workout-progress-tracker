@@ -9,6 +9,7 @@
 - [ ] Dockerize
 
 - [ ] API for motivational quotes
+
 - [ ] Sphinx and Read the Docs
 
 
