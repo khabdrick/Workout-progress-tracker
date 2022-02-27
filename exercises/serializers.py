@@ -11,10 +11,6 @@ class ExerciseSetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ExerciseSet
+        fields = '__all__'
+        depth = 1
 
-    def to_representation(self, instance):
-        representation = dict()
-        representation["exercise"] = instance.exercise.name
-        representation["exercise"] = instance.exercise.tips
-        representation["sets"] = instance.exercises.Set
-        representation["number_of_sets"] = instance.number_of_sets
