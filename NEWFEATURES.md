@@ -8,6 +8,7 @@
 
 - [ ] Dockerize
 
-- [ ] Deploy to AWS EC2
+- [ ] API for motivational quotes
+- [ ] Sphinx and Read the Docs
 
 
