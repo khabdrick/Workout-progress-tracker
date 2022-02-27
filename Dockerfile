@@ -7,12 +7,14 @@ ENV PYTHONUNBUFFERED 1
 # prevents Python from copying pyc files to the container.
 ENV PYTHONDONTWRITEBYTECODE 1  
 
+RUN mkdir /WPT
+WORKDIR /WPT
+
+
 # RUN pip install --upgrade pip 
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
-RUN mkdir /WPT
-WORKDIR /WPT
 
 COPY . /WPT
 
