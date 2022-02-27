@@ -1,4 +1,4 @@
-- [ ] Workout suggestion
+- [ ] API Workout suggestion
 
 - [x] Workout log
 
