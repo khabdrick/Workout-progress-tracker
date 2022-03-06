@@ -42,10 +42,14 @@ python manage.py runserver
 All commands are from the project root directory:
 
 # build images
+```
 docker-compose build
+```
 
 # start the app
+```
 docker-compose up    # Ctrl-C to stop
+```
 
 ## Use this to access admin
 
