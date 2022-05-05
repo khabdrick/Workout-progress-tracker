@@ -38,7 +38,19 @@ Now you can run the project with this command
 python manage.py runserver
 
 ```
+### Using Docker
+All commands are from the project root directory:
 
+build images
+```
+docker-compose build
+```
+
+start the app
+```
+docker-compose up    # Ctrl-C to stop
+```
+visit http://localhost:8080
 
 ## Use this to access admin
 
