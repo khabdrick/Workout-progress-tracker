@@ -7,10 +7,9 @@ class ExerciseSerializer(serializers.HyperlinkedModelSerializer):
         model = Exercise
         fields = ("name", "tips")
 
-class ExerciseSetSerializer(serializers.ModelSerializer):
 
+class ExerciseSetSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExerciseSet
-        fields = '__all__'
+        fields = "__all__"
         depth = 1
-

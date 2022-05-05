@@ -23,5 +23,5 @@ class Migration(migrations.Migration):
                 related_name="userlog",
                 to=settings.AUTH_USER_MODEL,
             ),
-        ),
+        )
     ]

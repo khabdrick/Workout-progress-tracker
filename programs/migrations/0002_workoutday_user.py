@@ -23,5 +23,5 @@ class Migration(migrations.Migration):
                 related_name="userprogram",
                 to=settings.AUTH_USER_MODEL,
             ),
-        ),
+        )
     ]

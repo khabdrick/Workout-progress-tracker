@@ -1,5 +1,10 @@
 from django.urls import path, include
-from .views import ExerciseCreateView, SetCreateView, ExerciseViewSet, ExerciseSetViewSet
+from .views import (
+    ExerciseCreateView,
+    SetCreateView,
+    ExerciseViewSet,
+    ExerciseSetViewSet,
+)
 from rest_framework import routers
 
 app_name = "exercises"

@@ -5,6 +5,7 @@ from django.urls import reverse_lazy, reverse
 from rest_framework import viewsets
 from .serializers import ExerciseSerializer, ExerciseSetSerializer
 
+
 class ExerciseCreateView(CreateView):
     """View to create each Exercise"""
 
@@ -43,6 +44,7 @@ class ExerciseViewSet(viewsets.ModelViewSet):
 
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
+
 
 class ExerciseSetViewSet(viewsets.ModelViewSet):
     """

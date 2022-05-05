@@ -7,9 +7,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        ("exercises", "0002_remove_exercise_muscle"),
-    ]
+    dependencies = [("exercises", "0002_remove_exercise_muscle")]
 
     operations = [
         migrations.CreateModel(
@@ -72,5 +70,5 @@ class Migration(migrations.Migration):
                 ),
                 ("exercises", models.ManyToManyField(to="exercises.ExerciseSet")),
             ],
-        ),
+        )
     ]
