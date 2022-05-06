@@ -6,9 +6,11 @@
 
 - [ ] Daily motivational quotes
 
-- [ ] Dockerize
+- [x] Dockerize
 
 - [ ] API for motivational quotes
+
+- [ ] fitness quotes
 
 - [ ] Sphinx and Read the Docs
 
