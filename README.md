@@ -41,7 +41,7 @@ python manage.py runserver
 ### Using Docker
 All commands are from the project root directory:
 
-build images
+#### Build images
 ```
 docker-compose build
 ```
