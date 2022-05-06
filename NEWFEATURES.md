@@ -4,8 +4,6 @@
 
 - [ ] Daily rating of workout for total number of reps
 
-- [ ] Daily motivational quotes
-
 - [x] Dockerize
 
 - [ ] API for motivational quotes
