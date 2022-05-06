@@ -8,7 +8,7 @@
 
 - [ ] API for motivational quotes
 
-- [ ] fitness quotes
+- [ ] bodybuilder quotes
 
 - [ ] Sphinx and Read the Docs
 
