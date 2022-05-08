@@ -1,7 +1,5 @@
 from django.urls import path, include
 from .views import (
-    ExerciseCreateView,
-    SetCreateView,
     ExerciseViewSet,
     ExerciseSetViewSet,
 )
@@ -15,6 +13,6 @@ router.register(r"exerciseset", ExerciseSetViewSet)  # route for exercise sets
 
 urlpatterns = [
     path("", include(router.urls)),
-    path("exercise_form/", ExerciseCreateView.as_view(), name="exercise_create"),
-    path("set_form/", SetCreateView.as_view(), name="set_create"),
+
+
 ]
