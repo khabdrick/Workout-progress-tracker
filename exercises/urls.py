@@ -2,7 +2,7 @@ from django.urls import path, include
 from .views import (
     ExerciseViewSet,
     ExerciseSetViewSet,
-    ExerciseCreateAPIView
+    ExerciseCreateAPIView, ExerciseUpdateAPIView
 )
 from rest_framework import routers
 
@@ -15,4 +15,7 @@ router.register(r"exerciseset", ExerciseSetViewSet)  # route for exercise sets l
 urlpatterns = [
     path("", include(router.urls)),
     path('create/', ExerciseCreateAPIView.as_view(), name='create_exercise'),
+    path('<int:pk>/update/',
+         ExerciseUpdateAPIView.as_view(),
+         name='update_exercise'),
 ]
