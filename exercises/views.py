@@ -4,7 +4,7 @@ from .serializers import ExerciseSerializer, ExerciseSetSerializer
 from rest_framework.generics import (UpdateAPIView, CreateAPIView, ListAPIView,
                                      RetrieveAPIView, DestroyAPIView)
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, AllowAny
-
+from  exercises.permissions import IsOwner
 
 class ExerciseCreateAPIView(CreateAPIView):
     """
@@ -24,53 +24,43 @@ class ExerciseCreateAPIView(CreateAPIView):
 
 
 
-# class ProjectUpdateAPIView(UpdateAPIView):
-#     """
-#     Update project.
+class ExerciseUpdateAPIView(UpdateAPIView):
+    """
+    Update exercise.
 
-#     Requires authentication.\n
-#     Requires project id.\n
-#     Returns project details.\n
-#     request body format:\n
-#         {\n
-#             "title": "string",\n
-#             "description": "string",\n
-#             "images": [\n
-#                 {\n
-#                 "image_url": "string",\n
-#                 "public_id": "string"\n
-#                 }\n
-#             ],\n
-#             "video": "string",\n
-#             "materials_used": "string",\n
-#             "category": "string"\n
-#         }\n
-#     """
-#     queryset = Project.objects.all()
-#     serializer_class = ProjectSerializer
-#     permission_classes = [IsAuthenticated, IsOwner]
-#     throttle_classes = [CustomUserRateThrottle, SustainedRateThrottle]
+    Requires authentication.\n
+    Requires exercise id.\n
+    Returns exercise details.\n
+    request body format:\n
+        {\n
+            "name": "string",\n
+            "tips": "string",\n
+        }\n
+    """
+    queryset = Exercise.objects.all()
+    serializer_class = ExerciseSerializer
+    permission_classes = [IsAuthenticated, IsOwner]
 
-#     def perform_update(self, serializer):
-#         try:
-#             old = Project.objects.get(pk=self.kwargs.get("pk"))
-#         except Project.DoesNotExist:
-#             pass
+    # def perform_update(self, serializer):
+    #     try:
+    #         old = Exercise.objects.get(pk=self.kwargs.get("pk"))
+    #     except Exercise.DoesNotExist:
+    #         pass
 
-#         new = serializer.save(creator=self.request.user)
-#         self.request.user.save()
+    #     new = serializer.save(creator=self.request.user)
+    #     self.request.user.save()
 
-#         if project_changed(old, new):
-#             info = {
-#                 "project_id": str(new.pk),
-#                 "editor": self.request.user.username
-#             }
-#             activity_notification(["edited_project"], **info)
+    #     if project_changed(old, new):
+    #         info = {
+    #             "exercise_id": str(new.pk),
+    #             "editor": self.request.user.username
+    #         }
+    #         activity_notification(["edited_project"], **info)
 
-#         # because project_changed still needs to make reference to the
-#         # old publishing rule, it wasn't deleted in the serializer update method,
-#         # instead we delete it here after project_changed has done it's part.
-#         old.publish.delete()
+    #     # because project_changed still needs to make reference to the
+    #     # old publishing rule, it wasn't deleted in the serializer update method,
+    #     # instead we delete it here after project_changed has done it's part.
+    #     old.publish.delete()
 
 
 # class ProjectDeleteAPIView(DestroyAPIView):
