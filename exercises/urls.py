@@ -8,12 +8,11 @@ from rest_framework import routers
 
 app_name = "exercises"
 router = routers.DefaultRouter()
-router.register(r"exercises", ExerciseViewSet)  # route for exercises
-router.register(r"exerciseset", ExerciseSetViewSet)  # route for exercise sets
+router.register(r"exercises", ExerciseViewSet)  # route for exercises list
+router.register(r"exerciseset", ExerciseSetViewSet)  # route for exercise sets list
 
 
 urlpatterns = [
     path("", include(router.urls)),
-
-
+    path('create/', ExerciseCreateAPIView.as_view(), name='create_exercise'),
 ]
