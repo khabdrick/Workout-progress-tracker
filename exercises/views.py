@@ -10,7 +10,7 @@ class ExerciseCreateAPIView(CreateAPIView):
     """
     Create new Exercise.\n
 
-    Requires authentication. Returns project details.\n
+    Requires authentication. Returns exercise details.\n
     Request body format:\n
         {\n
             "name": "string",\n
@@ -21,9 +21,7 @@ class ExerciseCreateAPIView(CreateAPIView):
     serializer_class = ExerciseSerializer
     permission_classes = [IsAuthenticated]
 
-    # def perform_create(self, serializer):
-    #     obj = serializer.save(creator=self.request.user)
-    #     self.request.user.save()
+
 
 
 # class ProjectUpdateAPIView(UpdateAPIView):
