@@ -13,17 +13,8 @@ class ExerciseCreateAPIView(CreateAPIView):
     Requires authentication. Returns project details.\n
     Request body format:\n
         {\n
-            "title": "string",\n
-            "description": "string",\n
-            "images": [\n
-                {\n
-                "image_url": "string",\n
-                "public_id": "string"\n
-                }\n
-            ],\n
-            "video": "string",\n
-            "materials_used": "string",\n
-            "category": "string"\n
+            "name": "string",\n
+            "tips": "string",\n
         }\n
     """
     queryset = Exercise.objects.all()
