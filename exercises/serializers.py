@@ -5,7 +5,7 @@ from .models import Exercise, ExerciseSet, Set
 class ExerciseSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Exercise
-        fields = ("name", "tips")
+        fields = ("name", "tips", "id")
 
 
 class ExerciseSetSerializer(serializers.ModelSerializer):
