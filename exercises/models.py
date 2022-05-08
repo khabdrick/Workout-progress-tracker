@@ -14,6 +14,7 @@ MUSCLE_GROUP = (
 
 class Exercise(models.Model):
     # Attributes
+    user = models.ForeignKey
     name = models.CharField(null=False, blank=False, max_length=100)
     tips = models.TextField(null=False, blank=True, max_length=1000)
 
@@ -24,6 +25,7 @@ class Exercise(models.Model):
 
 class ExerciseSet(models.Model):
     # Attributes for exercise sets
+    user = models.ForeignKey
     exercise = models.ForeignKey(
         Exercise, null=False, blank=False, on_delete=models.CASCADE
     )
@@ -37,6 +39,7 @@ class ExerciseSet(models.Model):
 
 class Set(models.Model):
     # Constants
+    user = models.ForeignKey
     REPS_UNIT = (("RE", "Reps"),)
     WEIGHT_UNIT = (("KG", "Kg."), ("BW", "Body Weight"))
     # Attributes
