@@ -2,6 +2,7 @@ from django.urls import path, include
 from .views import (
     ExerciseViewSet,
     ExerciseSetViewSet,
+    ExerciseCreateAPIView
 )
 from rest_framework import routers
 
