@@ -1,10 +1,20 @@
 from .models import Exercise, Set, ExerciseSet
 from rest_framework import viewsets
 from .serializers import ExerciseSerializer, ExerciseSetSerializer
-from rest_framework.generics import (UpdateAPIView, CreateAPIView, ListAPIView,
-                                     RetrieveAPIView, DestroyAPIView)
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, AllowAny
-from  exercises.permissions import IsOwner
+from rest_framework.generics import (
+    UpdateAPIView,
+    CreateAPIView,
+    ListAPIView,
+    RetrieveAPIView,
+    DestroyAPIView,
+)
+from rest_framework.permissions import (
+    IsAuthenticated,
+    IsAuthenticatedOrReadOnly,
+    AllowAny,
+)
+from exercises.permissions import IsOwner
+
 
 class ExerciseCreateAPIView(CreateAPIView):
     """
@@ -17,11 +27,10 @@ class ExerciseCreateAPIView(CreateAPIView):
             "tips": "string",\n
         }\n
     """
+
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
     permission_classes = [IsAuthenticated]
-
-
 
 
 class ExerciseUpdateAPIView(UpdateAPIView):
@@ -37,6 +46,7 @@ class ExerciseUpdateAPIView(UpdateAPIView):
             "tips": "string",\n
         }\n
     """
+
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
     permission_classes = [IsAuthenticated, IsOwner]

@@ -32,7 +32,7 @@ class ProgramView(ListView):
     """Display program"""
 
     model = WorkoutDay
-    template_name = "programs/program.html"  # <app>/<model>_<viewtype>.html
+    template_name = "programs/program.html"
     context_object_name = "program"
 
     def get_queryset(self):
